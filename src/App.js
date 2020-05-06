@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from "react-router-dom";
 import '../src/assets/css/App.css';
 import Navbar from './common/layout/navbar-landing';
+import {Novels} from './novels'
 
 import Routing from './common/router/router'
-import firebase from '../..firebase'
-
+import firebase from './firebase'
 function App() {
   const[novels,setNovels] = React.useState([])
 
@@ -22,7 +22,10 @@ function App() {
     return (
       <ul>
       {novels.map (novel =>(
-        <li key={novel.judul}>{novel.judul}</li>
+        <li key={novel.judul}>{novel.judul}>
+        <novels/>
+        </li>
+
       ))}
       
 </ul>
