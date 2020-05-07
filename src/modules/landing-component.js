@@ -1,30 +1,41 @@
-import React, { Component, Fragment } from 'react'; //import dari react biasa
-import { Layout, Row, Col, Modal } from 'antd'; //import dari ant seperti biasa
-import Navbar from '../common/layout/navbar-landing' //import komponen navbar dari folder layout yang ada di folder common 
-import ButtonHome from '../common/component/button/button-home'; //import komponen buttonhome yang ada di dalamn folder component yang ada di folder common
-import '../common/layout/css/landing-style.css'; //import css dari folder css yang ada di folder assets
-import firebase from '/.firebase'
-const { Content } = Layout; // membuat konstanta content yang berasal dari bawaan layout ant design, bisa dicek di dokumentasi antdesign
+import React from 'react';
+import { Layout, Row } from 'antd';
+import '../assets/css/landing.css'
+import firebase from '../firebase'
+const { Content } = Layout;
 
-class LandingComponent extends Component{
-    render(){
+function LandingComponent (){
+    const[novels,setNovels] = React.useState([])
+
+    React.useEffect(()=>{
+      const fetchData = async () => {
+        const db = firebase.firestore()
+        const data = await db.collection("Novelist").get()
+        setNovels (data.docs.map(doc=>doc.data()))
+      }
+      fetchData()
+    }, [] )
+
         return(
-            <Fragment className="fragment">
-            <div className="post">
-            <div className="img-thumb">
-                <img src="http://placeimg.com/350/200/any" alt=""/>
-            </div>
-            <div className="content">
-                <p className="title"> Judul </p>
-                <p className="penulis"> Penulis </p>
-                <p className="desc"> Sinopsis </p>
-            </div>
-        </div>
-            </Fragment>
-            
-        )
-        
+            <Layout className="landing-container">
+                <Content style={{ overflow: "hidden" }}>
+                <Row className="section-container">
+                {novels.map (novel =>
+                <div className="post">
+                    <div className="img-thumb">
+                        <img src={novel.Cover} width="120" height="100" resizeMode="contain" cover="center" />
+                    </div>  
+                    <div className="content">
+                        <p className="title"> {novel.Judul} </p>
+                        <p className="penulis"> {novel.Penulis} </p>
+                        <p className="desc"> {novel.Sinopsis} </p>
+                    </div>
+                </div>
+                )}
+                </Row>
+                </Content>
+            </Layout>
+        );
     }
-}
 
 export default LandingComponent;
