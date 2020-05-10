@@ -22,3 +22,12 @@
     margin: 16px auto;
     max-width: 620px;
 }
+
+p.title{
+    font-weight: bold;
+    
+}
+
+.penulis{
+    text-align: justify;
+}

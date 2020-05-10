@@ -3,6 +3,8 @@
 .section-container {
     margin: 0 80px;
     margin-bottom: 100px;
+    margin: auto;
+    width: 800px;
 }
 .full-container {
     min-height: 100vh;
@@ -166,4 +168,12 @@
     }
 
     /* Section 2 style */
+}
+
+.desc{
+    text-align: justify;
+}
+
+section{
+    padding: 80px;
 }

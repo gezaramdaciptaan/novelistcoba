@@ -23,13 +23,14 @@ function PortofolioComponent (){
                 {novels.map (novel =>
                 <div className="post">
                     <div className="img-thumb">
-                        <img src={novel.Foto} width="120" height="100"  />
+                        <img src={novel.Foto} width="100" height="100"  />
                     </div>  
                     <div className="content">
-                        <p className="title"> {novel.Nama} </p>
+                        <p className="title" > <font color="#CD5C5C"> {novel.Nama} </font></p>
                         <p className="penulis"> {novel.Tentang} </p>
                         
                     </div>
+                    <hr color="#CD5C5C" />
                 </div>
                 )}
                 </Row>

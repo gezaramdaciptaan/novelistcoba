@@ -22,14 +22,16 @@ function LandingComponent (){
                 <Row className="section-container">
                 {novels.map (novel =>
                 <div className="post">
+                    <br/>
                     <div className="img-thumb">
-                        <img src={novel.Cover} width="120" height="100" resizeMode="contain" cover="center" />
+                        <img src={novel.Cover} width="100" height="150" resizeMode="contain" cover="center" />
                     </div>  
                     <div className="content">
-                        <p className="title"> {novel.Judul} </p>
-                        <p className="penulis"> {novel.Penulis} </p>
+                        <p className="title"> <font color="#CD5C5C">{novel.Judul}</font>  </p>
+                        <p className="penulis"> <font color="#CD5C5C">{novel.Penulis}</font>  </p>
                         <p className="desc"> {novel.Sinopsis} </p>
                     </div>
+                    <hr size="0,1px" color="#CD5C5C" />
                 </div>
                 )}
                 </Row>

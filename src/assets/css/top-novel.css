@@ -22,3 +22,11 @@
     margin: 16px auto;
     max-width: 620px;
 }
+
+.desc{
+    text-align: justify;
+}
+
+section{
+    padding: 80px;
+}
