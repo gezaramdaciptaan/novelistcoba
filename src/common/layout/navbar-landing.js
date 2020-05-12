@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { Menu } from 'antd';
 import '../layout/css/navbar-style.css';
 import {
-  MailOutlined,
+  HistoryOutlined,
   AppstoreOutlined,
   SettingOutlined,
   StarOutlined,
   UserOutlined,
+  VerticalAlignBottomOutlined,
+  MoreOutlined,
 } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 
@@ -36,11 +38,31 @@ class Navbar extends Component {
         <Menu.Item key="app">
           <UserOutlined />
           <Link to="/portofolio">Author</Link>
-        </Menu.Item>
+        </Menu.Item>    
         <Menu.Item key="top">
           <StarOutlined />
           <Link to="/topnovel">Best Seller</Link>
         </Menu.Item>
+        
+        <SubMenu
+          title={
+            <span className="ticket">
+              <MoreOutlined/>
+              More
+            </span>
+          }
+        >
+        <Menu.ItemGroup>
+          <Menu.Item key="buy">
+            <VerticalAlignBottomOutlined />
+            <Link to="/buynow">Add Novel</Link>
+          </Menu.Item>
+          <Menu.Item key="history">
+            <HistoryOutlined />
+            <Link to="/history">History</Link>
+          </Menu.Item>
+        </Menu.ItemGroup>
+        </SubMenu>
       </Menu>
     </nav>
     );

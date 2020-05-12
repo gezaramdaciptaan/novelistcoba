@@ -2,7 +2,8 @@ import React from 'react';
 import { Layout, Row } from 'antd';
 import '../assets/css/top-novel.css'
 import firebase from '../firebase'
-const { Content } = Layout;
+const { Content, Header,Footer } = Layout;
+
 
 
 
@@ -25,11 +26,15 @@ function TopNovel(){
                 {novels.map (novel =>
                 <div className="post">
                     <div className="img-thumb">
-                    <img src={novel.Cover} width="100" height="150"  />
+                    <img src={novel.Cover} width="200" height="300"  />
                     </div>  
                     <div className="content">
-                        <p className="title"> <font color="#CD5C5C">  {novel.Judul} </font> </p>
-                        <p className="penulis"> <font color="#CD5C5C">  {novel.Penulis} </font> </p>
+                        <center>
+                            <p className="title"> <font color="#CD5C5C">  {novel.Judul} </font> </p>
+                        </center>
+                        <center>
+                            <p className="penulis"> <font color="#CD5C5C">  {novel.Penulis} </font> </p>
+                        </center>                                               
                         <p className="desc"> {novel.Sinopsis} </p>
                     </div>
                     <hr color="#CD5C5C" />
@@ -37,12 +42,13 @@ function TopNovel(){
                 )}
                 </Row>
                 </Content>
+                <Footer style={{backgroundColor:'white' , textAlign: 'center'}}>Novelist ©2020 </Footer>
             </Layout>
         );
     }
 
     
-    
+
 
 
 export default TopNovel;

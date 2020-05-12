@@ -1,0 +1,15 @@
+.ant-input-number{
+    display: block;
+    
+    }  
+.posisi{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    }
+.section-container {
+        margin: 0 80px;
+        margin-bottom: 100px;
+        margin: auto;
+        width: 800px;
+    }
