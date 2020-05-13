@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/coba/static/css/main.f4140f89.chunk.css",
+    "main.js": "/coba/static/js/main.8ef18181.chunk.js",
+    "main.js.map": "/coba/static/js/main.8ef18181.chunk.js.map",
+    "runtime-main.js": "/coba/static/js/runtime-main.6d5cf619.js",
+    "runtime-main.js.map": "/coba/static/js/runtime-main.6d5cf619.js.map",
+    "static/css/2.1bd2ab2f.chunk.css": "/coba/static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.fe92455f.chunk.js": "/coba/static/js/2.fe92455f.chunk.js",
+    "static/js/2.fe92455f.chunk.js.map": "/coba/static/js/2.fe92455f.chunk.js.map",
+    "index.html": "/coba/index.html",
+    "precache-manifest.57dc3beadea269b996c6cb3f22aaa1dd.js": "/coba/precache-manifest.57dc3beadea269b996c6cb3f22aaa1dd.js",
+    "service-worker.js": "/coba/service-worker.js",
+    "static/css/2.1bd2ab2f.chunk.css.map": "/coba/static/css/2.1bd2ab2f.chunk.css.map",
+    "static/css/main.f4140f89.chunk.css.map": "/coba/static/css/main.f4140f89.chunk.css.map",
+    "static/js/2.fe92455f.chunk.js.LICENSE.txt": "/coba/static/js/2.fe92455f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d5cf619.js",
+    "static/css/2.1bd2ab2f.chunk.css",
+    "static/js/2.fe92455f.chunk.js",
+    "static/css/main.f4140f89.chunk.css",
+    "static/js/main.8ef18181.chunk.js"
+  ]
+}
