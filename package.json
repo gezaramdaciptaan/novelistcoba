@@ -1,8 +1,8 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "private": false,
-  "homepage": "https://endayusma.github.io/Tugas-4-WEB",
+  "private":false,
+  "homepage": "https://gezaramdaciptaan.github.io/coba",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.1",
